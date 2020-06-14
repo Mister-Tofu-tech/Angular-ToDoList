@@ -1,0 +1,8 @@
+.row {
+    color: #fff;
+    justify-content: center;
+}
+
+.row > a{
+    color: #fff;
+}

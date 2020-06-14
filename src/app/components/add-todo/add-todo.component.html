@@ -1,0 +1,10 @@
+<form class="form" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <mat-label>Add Todo</mat-label>
+        <input matInput name="title" [(ngModel)]="title">
+    </mat-form-field>
+    
+    <button mat-raised-button type="submit" value="Submit" color="accent">
+        Submit
+    </button>
+</form>
