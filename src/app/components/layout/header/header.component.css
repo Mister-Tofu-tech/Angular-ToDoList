@@ -1,6 +1,12 @@
 .row {
-    color: #fff;
+    margin-top: 3%;
     justify-content: center;
+}
+
+h1  {
+    font-family: Abel;
+    color: rgb(72, 58, 79);
+    font-size: 3em;
 }
 
 .row > a{

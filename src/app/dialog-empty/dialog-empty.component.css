@@ -1,0 +1,12 @@
+.Message {
+    font-family: 'IBM Plex Sans', sans-serif;;
+}
+
+mat-dialog-actions {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    outline: none;
+}

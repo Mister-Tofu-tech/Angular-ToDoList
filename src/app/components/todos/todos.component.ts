@@ -17,9 +17,31 @@ export class TodosComponent implements OnInit {
   constructor(private todoService:TodoService, app:FirebaseApp) {}
 
   ngOnInit(): void {
+    this.getTodos();
+  }
+
+  getTodos(): void {
+    let tempTd: Todo[] = []
     this.todoService.getTodos().subscribe(todos => {
-      this.todos = todos;
+      if(todos){
+        Object.keys(todos).forEach( key => {
+          if(tempTd.length > 0){
+            tempTd.unshift({
+              "id" : key,
+              "title" : todos[key]["title"],
+              "completed" : todos[key]["completed"]
+            });
+          }else{
+            tempTd.push({
+              "id" : key,
+              "title" : todos[key]["title"],
+              "completed" : todos[key]["completed"]
+            });
+          }
+        });
+      }
     });
+    this.todos = tempTd;
   }
 
   deleteTodo(todo:Todo) {
@@ -32,8 +54,7 @@ export class TodosComponent implements OnInit {
 
   addTodo(todo:Todo) {
     this.todoService.addTodo(todo).subscribe(todo => {
-      this.todos.push(todo);
+      this.getTodos();
     });
   }
-
 }

@@ -20,7 +20,7 @@ span {
   display: inline-flex;
   margin-left: 5%;
   margin-top: 5%;
-  font-size:1.5em;
+  font-size:1.4em;
 }
 
 .box{
@@ -38,11 +38,11 @@ div {
   width: 50%;
   margin-left: 25%;
   margin-bottom: 2%;
-  box-shadow: 2px 3px 4px #888888;
+  box-shadow: 1px 2px 3px #888888;
 }
 
 .todo {
-  background: #f4f4f4;
+  background: rgb(250, 248, 242);
   border: 0.5px #ccc solid;
   border-radius: 0.15cm;
 }

@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { HeaderComponent } from './components/layout/header/header.component';
-import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { AddTodoComponent} from './components/add-todo/add-todo.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
@@ -21,11 +21,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {MatInputModule} from '@angular/material/input';
-import {MatListModule, MatList} from '@angular/material/list';
-import {MatDividerModule} from '@angular/material/divider';
-import { MAT_DATE_LOCALE_PROVIDER } from '@angular/material/core';
+import { MatInputModule} from '@angular/material/input';
+import { MatListModule, MatList} from '@angular/material/list';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatDialogModule } from "@angular/material/dialog";
 import { environment } from 'src/environments/environment';
+import { DialogEmptyComponent } from './dialog-empty/dialog-empty.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,10 @@ import { environment } from 'src/environments/environment';
     TodoItemComponent,
     HeaderComponent,
     AddTodoComponent,
-    AboutComponent
+    AboutComponent,
+    DialogEmptyComponent,
   ],
+  entryComponents: [DialogEmptyComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -52,6 +55,7 @@ import { environment } from 'src/environments/environment';
     NgbModule,
     MatInputModule,
     MatListModule,
+    MatDialogModule,
     MatDividerModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
