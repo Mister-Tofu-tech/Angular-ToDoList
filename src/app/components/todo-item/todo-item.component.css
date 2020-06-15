@@ -1,52 +1,81 @@
-/* .del {
-  cursor: pointer;
-  float: right;
-  color: gray;
-  margin-bottom: 0.5%;
-  margin-right: 2%;
-} */
-
-.del {
+.del{
+  display: inline-block;
+  position: absolute;
   color: gray;
   border: none;
   outline: none;
   cursor: pointer;
-  float: right;
-  margin-right: 3%;
-  margin-top: 4%;
+  margin-left: 43%;
+  margin-top: 2%;
 }
 
-span {
-  display: inline-flex;
-  margin-left: 5%;
-  margin-top: 5%;
-  font-size:1.4em;
+@media (max-width: 768px) {
+  .del{
+    margin-bottom: 5% !important;
+  }
+  .content{
+    font-size: 2vw !important;
+  }
 }
 
-.box{
-  margin-top: 5%;
+@media (max-width: 992px) {
+  .del{
+    margin-top: 1%;
+  }
+}
+
+
+.content {
+  display: inline-block;
+  position: absolute;
+  width: 25vw;
+  height: 4vw;
+  margin-top: 2.8%;
+  margin-left: 7%;
+  margin-bottom: 1%;
+  font-size: 1.5vw;
+  font-family: 'Titillium Web', sans-serif;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
+
+
+mat-checkbox{
+  display: inline-block;
+  position: absolute;
+  width: 2vw;
+  height: 2vw;
+  margin-top: 3%;
   margin-left: 3%;
 }
 
-/* .todo {
-  padding: 10px;
-  justify-content: center;
-} */
-
-div {
-  height: 100px;
+div{
+  height: 7vw;
   width: 50%;
-  margin-left: 25%;
   margin-bottom: 2%;
+  margin-left: 25%;
   box-shadow: 1px 2px 3px #888888;
+  cursor: move;
+  vertical-align: middle;
 }
 
 .todo {
-  background: rgb(250, 248, 242);
+  background: #eeedf0;
   border: 0.5px #ccc solid;
   border-radius: 0.15cm;
 }
 
-.is-complete {
+.is-complete .content{
   text-decoration: line-through;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.placeholder {
+  background: #e1e3e1;
+  border-radius: 0.15cm;
+  border: dotted 1.5px #999;
+  transition: transform 300ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }

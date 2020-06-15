@@ -1,13 +1,12 @@
 .form {
     display: flex;
-    margin: 2% 2% 2%;
     justify-content: center;
 }
 
 mat-form-field {
     width: 30%;
     outline: none;
-    font-size: large;
+    font-size: 1em;
 }
 
 mat-label {
@@ -19,10 +18,9 @@ mat-label {
 } */
 
 button{
-    display: table-cell;
-    margin-left: 10px;
-    height: 3em;
+    margin-left: 5%;
+    margin-top: 2vh;
     outline: none;
-    margin-top: 1%;
-    font-size: 1.2em;
+    width: 5%;
+    height: 2%;
 }

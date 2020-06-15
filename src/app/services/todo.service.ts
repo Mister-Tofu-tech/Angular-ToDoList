@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Todo } from '../models/Todos';
 import { Observable } from 'rxjs';
-import { AngularFireDatabase} from 'angularfire2/database';
 import { FirebaseApp } from 'angularfire2';
 
 const httpOptions = {

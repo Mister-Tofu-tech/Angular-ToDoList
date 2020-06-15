@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseApp } from 'angularfire2';
+import { CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+
 import { Todo } from '../../models/Todos';
 import { TodoService } from '../../services/todo.service';
-import { AngularFireDatabase} from 'angularfire2/database';
-import { FirebaseApp } from 'angularfire2';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-todos',
@@ -18,6 +18,10 @@ export class TodosComponent implements OnInit {
 
   ngOnInit(): void {
     this.getTodos();
+  }
+
+  drop(event: CdkDragDrop<Todo[]>){
+    moveItemInArray(this.todos, event.previousIndex, event.currentIndex);
   }
 
   getTodos(): void {

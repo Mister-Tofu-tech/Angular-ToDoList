@@ -1,4 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter,} from '@angular/core';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
+import {MatCardModule} from '@angular/material/card';
+
 import { Todo } from 'src/app/models/Todos';
 import { TodoService } from '../../services/todo.service';
 

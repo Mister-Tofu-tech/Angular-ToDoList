@@ -1,8 +1,12 @@
-<div [ngClass]="setClasses()">
-    <mat-checkbox (change)="onToggle(todo)" class="box"></mat-checkbox>
-        <span>{{ todo.title }}</span>
-        <button mat-icon-button (click)="onDelete(todo)" class="del" aria-label="Example icon button with a filter list icon">
-            <mat-icon>delete_outline</mat-icon>
-        </button>
+
+<div cdkDrag [ngClass]="setClasses()">
+    <mat-checkbox (change)="onToggle(todo)"></mat-checkbox>
+    <span class="content">{{ todo.title }}</span>
+    <button mat-icon-button (click)="onDelete(todo)" class="del" aria-label="Example icon button with a filter list icon">
+        <mat-icon>delete_outline</mat-icon>
+    </button>
+    <div *cdkDragPlaceholder class="placeholder"></div>
+    <div *cdkDragPreview class="content todo">{{todo.title}}</div>
 </div>
+   
 
