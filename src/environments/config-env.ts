@@ -1,7 +1,6 @@
 const fs = require('fs');
 require('dotenv').config();
 
-console.log(process.env.API_KEY);
 const targetPath = `./src/environments/environment.prod.ts`;
 const targetPath2 = `./src/environments/environment.ts`;
 
